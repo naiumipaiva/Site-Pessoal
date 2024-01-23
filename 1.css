@@ -1,0 +1,165 @@
+/*CONTEUDO LAYOUT*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-left: 8vw;
+}
+
+
+main {
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+footer {
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+section {
+    grid-column: 1;
+    text-align: center;
+    width: 25vw;
+
+}
+
+aside {
+    grid-column: 2;
+    text-align: center;
+    width: 25vw;
+}
+
+.grid::before {
+    content: "";
+    position: absolute;
+    top: 148%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 102%;
+    background-color: #FE8442;
+    ;
+}
+
+/*STYLES*/
+
+.frase {
+    color: #FE8442;
+    font-size: 150%;
+    font-family: "forma-djr-deck", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h3 {
+    color: #FE8442;
+    font-size: 150%;
+    font-family: "forma-djr-deck", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+p {
+    font-size: 120%;
+    font-family: 'Noto Sans Display', sans-serif;
+    text-align: justify;
+}
+
+
+/*FOTOS*/
+.eu {
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+}
+
+.mini {
+    border-radius: 100%;
+    width: 60%;
+    height: 60%
+}
+
+.museu {
+    border-radius: 100%;
+    width: 60%;
+    height: 60%
+}
+
+
+/* RESPONSIVO*/
+
+@media screen and (max-width: 1120px) {
+
+    /*conteudo geral*/
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        margin-left: 0vw;
+    }
+
+    main {
+        grid-column: 1 / span 2;
+        text-align: center;
+        width: 90%;
+    }
+
+    section {
+        grid-column: 1;
+        text-align: center;
+        width: 80%;
+    }
+
+    aside {
+        grid-column: 1;
+        text-align: center;
+        width: 80%;
+    }
+
+    /*conteudo especifico*/
+    .frase {
+        align-items: center;
+    }
+
+    .eu {
+        width: 70%;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .titulo {
+        padding-top: 15px;
+        width: 100%;
+        height: 40%;
+        align-items: center
+    }
+
+    p {
+        text-align: center
+    }
+
+    h3 {
+        font-size: 150%;
+    }
+
+    small {
+        display: block;
+        padding: 20px 10px;
+
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .grid::before {
+        top: 125%;
+    height: 85%;
+        
+    }
+}

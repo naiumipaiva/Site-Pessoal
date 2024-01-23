@@ -1,0 +1,281 @@
+/*CONTEUDO LAYOUT*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-left: 8vw;
+}
+
+
+main {
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+footer {
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+section {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    height: 73vh;
+    width: 68vh;
+    position: relative;
+    background-image: url(img/caixa1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    align-items: center;
+}
+
+.cont {
+    display: flex;
+    grid-column: 2;
+    height: 95vh;
+    width: 35vw;
+    position: relative;
+    background-image: url(img/caixa5.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.apps,
+.idioma {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+
+
+li img {
+    position: relative;
+    float: right;
+    margin-left: 30px;
+    top: 0.5vh;
+}
+
+
+.apps {
+    height: 40vh;
+    margin-top: 4vh;
+}
+
+.idioma {
+    height: 25vh;
+}
+
+.compe {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vh;
+    height: auto;
+    z-index: 1;
+    padding-top: 5vh;
+    list-style: url(img/ball.png);
+
+}
+
+.compe ul {
+    align-self: flex-start;
+    margin-left: 0;
+}
+
+/*STYLES*/
+h3 {
+    color: #FE8442;
+    font-size: 150%;
+    font-family: "forma-djr-deck", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    align-self: center;
+    margin: 0;
+}
+
+
+p {
+    font-size: 120%;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin: 1vh 1vw;
+
+}
+
+
+li {
+    font-size: 120%;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin: 1vh 1vw;
+}
+
+
+.mi {
+    position: absolute;
+    z-index: 0;
+    top: 65vh;
+    left: 70vh;
+}
+
+
+
+/* RESPONSIVO*/
+
+@media screen and (max-width: 1440px) {
+
+    main {
+        margin-bottom: 3vh;
+    }
+
+    section {
+        height: 55vh;
+        width: 55vh;
+    }
+
+    .cont {
+        height: 65vh;
+    }
+
+    .compe {
+        width: 52vh;
+    }
+
+    .mi {
+        top: 63vh;
+        left: 51vh;
+    }
+
+    li {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        margin-left: 0vw;
+    }
+
+    main {
+        grid-column: 1 / span 2;
+        text-align: center;
+        width: 90%;
+    }
+
+    section {
+        grid-column: 1;
+        width: 99%;
+        height: 55vh;
+        background-image: url(img/caixa6.svg);
+        margin-bottom: 5vh;
+    }
+
+    .mi {
+        display: none;
+    }
+
+    .cont {
+        grid-column: 1;
+        width: 95%;
+        height: auto;
+        background-image: url(img/caixa4.svg)
+    }
+
+    .apps,
+    .idioma {
+        width: 85%;
+        height: auto;
+
+    }
+
+    .compe {
+        width: 40vh;
+        height: 90vh;
+        align-content: center;
+
+    }
+
+
+    /*conteudo especifico*/
+
+    .titulo {
+        padding-top: 15px;
+        width: 95%;
+        height: auto;
+        align-items: center
+    }
+
+    h3 {
+        font-size: 140%;
+        padding-bottom: 1.5vh;
+    }
+
+
+    small {
+        display: block;
+        margin-top: 40vh;
+        padding: 20px 10px;
+    }
+
+    li {
+        font-size: 85%
+    }
+
+    li img {
+        width: 65%;
+        margin-left: 0px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 415px) {
+    section {
+        height: 62vh;
+    }
+
+    .apps,
+    .idioma {
+        height: auto;
+        width: auto;
+    }
+
+    .cont {
+        height: 100%;
+    }
+
+    .compe {
+        width: 50vh;
+        height: 98vh;
+    }
+}

@@ -1,0 +1,249 @@
+/*CONTEUDO LAYOUT*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-left: 8vw;
+}
+
+
+main {
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+footer {
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+section {
+    grid-column: 1;
+    height: 80vh;
+    background-image: url(img/caixa1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cont {
+    grid-column: 2;
+    height: 80vh;
+    background-image: url(img/caixa1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    height: 60vh;
+    z-index: 1;
+}
+
+.ed {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    height: 45vh;
+    z-index: 1;
+}
+
+.curriculo {
+    position: relative;
+    font-size: 20px;
+    margin: 0vh;
+    top: 20px;
+    left: -90px;
+    width: 10vw;
+    z-index: 1
+}
+
+
+
+/*STYLES*/
+
+h3 {
+    color: #FE8442;
+    font-size: 150%;
+    font-family: "forma-djr-deck", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p {
+    font-size: 120%;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin: 1vh 1vw;
+
+}
+
+.ex ul {
+    list-style: url(img/ball.png);
+    padding: 0;
+    margin: 0;
+}
+
+.ex li {
+    font-size: 120%;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin: 1vh 1vw;
+    margin-left: 2vw;
+
+}
+
+.ex h3 {
+    margin-bottom: 1vh;
+}
+
+.sobre {
+    position: absolute;
+    left: 70vh;
+    top: 80vh;
+    z-index: 2;
+}
+
+
+/* RESPONSIVO*/
+
+@media screen and (max-width: 1440px) {
+
+    section {
+        height: 65vh;
+        width: 45vh;
+        justify-content: center;
+    }
+
+
+    .cont {
+        height: 50vh;
+        width: 45vh;
+        justify-content: center
+    }
+
+    .ex {
+        width: 30vw;
+        height: 50vh;
+        z-index: 1;
+    }
+
+    .ed {
+        width: 30vw;
+        height: 50vh;
+        z-index: 1;
+    }
+
+    img.sobre {
+        left: 55vh;
+        top: 66vh;
+    }
+
+    .curriculo {
+        left: -6vh;
+        top: -9vh;
+
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    /*conteudo geral*/
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        margin-left: 0vw;
+    }
+
+    main {
+        grid-column: 1 / span 2;
+        text-align: center;
+        width: 90%;
+    }
+
+    section {
+        grid-column: 1;
+        width: 95%;
+        height: 55vh;
+        background-image: url(img/caixa1.svg)
+    }
+
+    .cont {
+        grid-column: 1;
+        width: 95%;
+        height: 65vh;
+        background-image: url(img/caixa1.svg)
+    }
+
+    .ex {
+        width: 85%;
+        height: 50vh;
+        padding-left: 8vw;
+    }
+
+    .ed {
+        width: auto;
+        height: 45vh;
+
+    }
+
+    .sobre {
+        display: none;
+    }
+
+    .curriculo {
+        align-self: center;
+        top: -6vh;
+        left: 7vh;
+
+    }
+
+    /*conteudo especifico*/
+
+    .titulo {
+        padding-top: 15px;
+        width: 100%;
+        height: auto;
+        align-items: center
+    }
+
+    h3 {
+        font-size: 140%;
+    }
+
+    small {
+        display: block;
+        margin-top: 40vh;
+        padding: 20px 10px;
+
+    }
+
+    p,
+    .ex li {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 415px) {
+
+    section {
+        height: 65vh;
+    }
+
+    .ex {
+        height: 54vh;
+    }
+
+
+}
